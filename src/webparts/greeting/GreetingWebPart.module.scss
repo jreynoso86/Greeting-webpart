@@ -1,0 +1,87 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.greeting {
+  background: transparent !important;
+  background-color: transparent !important;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: auto;
+  box-sizing: border-box;
+  position: relative;
+
+  // Banner-like styling
+  &.bannerStyle {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Full-width section compatibility
+  &[data-sp-canvascontrol] {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  h1 {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    margin: 0;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    width: auto;
+    flex: 0 0 auto;
+    display: inline-block;
+
+    // Banner-like typography
+    &.bannerText {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    // Responsive design for different screen sizes
+    @media (max-width: 768px) {
+      padding: 15px;
+      font-size: calc(var(--greeting-font-size, 32px) * 0.8) !important;
+    }
+
+    @media (max-width: 480px) {
+      padding: 10px;
+      font-size: calc(var(--greeting-font-size, 32px) * 0.7) !important;
+    }
+  }
+
+  &.transparent {
+    * {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+
+  // Force transparency on parent containers (for full-width sections)
+  &.forceTransparent {
+    background: none !important;
+    background-color: transparent !important;
+
+    // Target SharePoint canvas containers
+    :global(.CanvasComponent) {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    :global(.CanvasZone) {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    :global(.SPCanvas) {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+}

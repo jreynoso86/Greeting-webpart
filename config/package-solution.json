@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "greeting-webpart-client-side-solution",
+    "id": "12345678-1234-1234-1234-123456789012",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Your Organization",
+      "websiteUrl": "https://yourcompany.com",
+      "privacyUrl": "https://yourcompany.com/privacy",
+      "termsOfUseUrl": "https://yourcompany.com/terms",
+      "mpnId": "000000"
+    }
+  },
+  "paths": {
+    "zippedPackage": "solution/greeting-webpart.sppkg"
+  }
+}
